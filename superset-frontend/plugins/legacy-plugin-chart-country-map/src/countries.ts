@@ -214,6 +214,8 @@ import uzbekistan from './countries/uzbekistan.geojson';
 import vanuatu from './countries/vanuatu.geojson';
 import venezuela from './countries/venezuela.geojson';
 import vietnam from './countries/vietnam.geojson';
+import vietnam_pre from './countries/vietnam_pre.geojson';
+import vietnam_post from './countries/vietnam_post.geojson';
 import wallis_and_futuna from './countries/wallis_and_futuna.geojson';
 import yemen from './countries/yemen.geojson';
 import zambia from './countries/zambia.geojson';
@@ -417,6 +419,8 @@ export const countries = {
   vanuatu,
   venezuela,
   vietnam,
+  vietnam_pre,
+  vietnam_post,
   wallis_and_futuna,
   yemen,
   zambia,
@@ -438,6 +442,12 @@ export const countryOptions = Object.keys(countries).map(x => {
   }
   if (x === 'turkey_regions') {
     return [x, 'Turkey (regions)'];
+  }
+  if (x === 'vietnam_pre') {
+    return [x, 'Vietnam (Trước sáp nhập)'];
+  }
+  if (x === 'vietnam_post') {
+    return [x, 'Vietnam (Sau sáp nhập)'];
   }
   return [
     x,
