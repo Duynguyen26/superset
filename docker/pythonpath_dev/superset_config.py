@@ -154,23 +154,67 @@ HTML_SANITIZATION_SCHEMA_EXTENSIONS = {
     "tagNames": ["style"]
 }
 
-# Brandfolder Standard Color Scheme
+# Brandfolder Beautiful Dashboards Color Schemes
 EXTRA_CATEGORICAL_COLOR_SCHEMES = [
     {
-        "id": "brandfolder_standard",
+        "id": "bf_standard",
         "description": "Brandfolder Standard Theme",
         "label": "Brandfolder Standard",
-        "colors": [
-            "#5886E9",
-            "#0F3B99",
-            "#FFC505",
-            "#FF9705",
-            "#A1D6FC",
-            "#37CDC1",
-            "#51CD37",
-            "#FF5005",
-            "#2862DC",
-            "#062A74"
-        ]
+        "colors": ["#E0EAFF", "#062A74", "#3D3D3D", "#2862DC", "#0F3B99", "#5886E9", "#FFC505", "#FF9705", "#A1D6FC", "#37CDC1", "#51CD37", "#FF5005"]
+    },
+    {
+        "id": "bf_deep_space",
+        "description": "Brandfolder Deep Space Theme",
+        "label": "Brandfolder Deep Space",
+        "colors": ["#9EF09E", "#5566FC", "#92B0FF", "#F5DC71", "#FF9C41", "#F55077"]
+    },
+    {
+        "id": "bf_forest",
+        "description": "Brandfolder Forest Theme",
+        "label": "Brandfolder Forest",
+        "colors": ["#FCFF66", "#ABD006", "#86A305", "#2BABA1", "#D6F5F2"]
+    },
+    {
+        "id": "bf_starry_night",
+        "description": "Brandfolder Starry Night Theme",
+        "label": "Brandfolder Starry Night",
+        "colors": ["#CDF80C", "#ABD006", "#86A305", "#5572AF", "#7D94C4", "#B8C6E5"]
+    },
+    {
+        "id": "bf_retro",
+        "description": "Brandfolder Retro Theme",
+        "label": "Brandfolder Retro",
+        "colors": ["#223459", "#6A5AAA", "#B45082", "#F9767F", "#FFB142", "#FFDE70"]
+    },
+    {
+        "id": "bf_pastel",
+        "description": "Brandfolder Pastel Theme",
+        "label": "Brandfolder Pastel",
+        "colors": ["#A0E0DA", "#16103C", "#A6BEF7", "#99E5FD", "#FADE80", "#FFB8BD"]
+    },
+    {
+        "id": "bf_desert_sand",
+        "description": "Brandfolder Desert Sand Theme",
+        "label": "Brandfolder Desert Sand",
+        "colors": ["#062A74", "#2862DC", "#78A0F7", "#B2792A", "#FFC505", "#E9E7E1"]
+    },
+    {
+        "id": "bf_emerald",
+        "description": "Brandfolder Emerald Theme",
+        "label": "Brandfolder Emerald",
+        "colors": ["#FF9705", "#C06944", "#324947", "#22867E", "#B2ECE7", "#EDE0CF"]
+    },
+    {
+        "id": "bf_rainbow",
+        "description": "Brandfolder Rainbow Theme",
+        "label": "Brandfolder Rainbow",
+        "colors": ["#FFC505", "#31D6AE", "#0B96F9", "#2862DC", "#062A74", "#BE55A7"]
+    },
+    {
+        "id": "bf_sunny_surf",
+        "description": "Brandfolder Sunny Surf Theme",
+        "label": "Brandfolder Sunny Surf",
+        "colors": ["#FF9705", "#062A74", "#034BE4", "#428BF9", "#B6CDFF", "#FAD1D4"]
     }
 ]
+
