@@ -36,7 +36,7 @@ export const useDashboardMetadataBar = (dashboardInfo: DashboardInfo) => {
         type: MetadataType.Editor as const,
         createdBy: getUserName(dashboardInfo.created_by) || t('Not available'),
         editors:
-          dashboardInfo.editors.length > 0
+          dashboardInfo.editors && dashboardInfo.editors.length > 0
             ? dashboardInfo.editors.map(getUserName)
             : t('None'),
         createdOn: dashboardInfo.created_on_delta_humanized,
