@@ -66,3 +66,28 @@ Dù tên biểu đồ là "Country Map" (Bản đồ quốc gia), bạn hoàn to
 4. Kéo cột chứa mã khu vực vào ô **ISO 3166-2 Codes**.
 5. Kéo cột dữ liệu muốn thể hiện màu sắc (ví dụ: Doanh thu) vào ô **Metric** (chọn `SUM`).
 6. Bấm nút **Update chart** để xem kết quả.
+
+---
+
+## Phụ lục: Kích hoạt CSS bên trong biểu đồ Handlebars (Tùy chọn)
+
+Mặc định, Superset khóa tính năng hiển thị `<style>` CSS bên trong **Handlebars Chart** (HTML_SANITIZATION = True) để chống tấn công XSS. 
+Nếu bạn viết CSS trong ô `styleTemplate` của biểu đồ Handlebars mà không thấy tác dụng, bạn có thể thiết lập mở khóa cho thẻ này:
+
+**Cách kích hoạt:**
+1. Mở file cấu hình của Superset (Ví dụ: `docker/pythonpath_dev/superset_config.py`).
+2. Thêm hoặc cập nhật dòng sau vào file:
+```python
+# Cho phép thẻ <style> chạy qua bộ lọc bảo mật để CSS của Handlebars hoạt động
+HTML_SANITIZATION_SCHEMA_EXTENSIONS = {
+    "tagNames": ["style"]
+}
+```
+3. Khởi động lại Superset.
+
+**Lưu ý cực kỳ quan trọng:** Khi viết CSS trực tiếp vào Handlebars Chart, CSS đó sẽ ảnh hưởng đến **toàn bộ Dashboard**. Bạn BẮT BUỘC phải bọc CSS vào một `#ID` cụ thể để nó chỉ áp dụng riêng cho biểu đồ đó. Ví dụ:
+```css
+#bieu-do-cua-toi h1 {
+    color: red;
+}
+```

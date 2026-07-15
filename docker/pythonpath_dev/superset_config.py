@@ -148,3 +148,8 @@ try:
     )
 except ImportError:
     logger.info("Using default Docker config...")
+
+# Enable <style> tags for Handlebars chart CSS
+HTML_SANITIZATION_SCHEMA_EXTENSIONS = {
+    "tagNames": ["style"]
+}
