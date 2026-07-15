@@ -153,3 +153,24 @@ except ImportError:
 HTML_SANITIZATION_SCHEMA_EXTENSIONS = {
     "tagNames": ["style"]
 }
+
+# Brandfolder Standard Color Scheme
+EXTRA_CATEGORICAL_COLOR_SCHEMES = [
+    {
+        "id": "brandfolder_standard",
+        "description": "Brandfolder Standard Theme",
+        "label": "Brandfolder Standard",
+        "colors": [
+            "#5886E9",
+            "#0F3B99",
+            "#FFC505",
+            "#FF9705",
+            "#A1D6FC",
+            "#37CDC1",
+            "#51CD37",
+            "#FF5005",
+            "#2862DC",
+            "#062A74"
+        ]
+    }
+]
