@@ -23,18 +23,26 @@ import { DashboardLayout } from '../types';
 export default function findFirstParentContainerId(
   layout: DashboardLayout = {},
 ): string {
-  // DASHBOARD_GRID_TYPE or TABS_TYPE?
-  let parent = layout[DASHBOARD_ROOT_ID];
-  if (
-    parent &&
-    parent.children.length &&
-    layout[parent.children[0]].type === TABS_TYPE
-  ) {
-    const tabs = layout[parent.children[0]];
-    parent = layout[tabs.children[0]];
-  } else {
-    parent = layout[parent.children[0]];
+  const root = layout[DASHBOARD_ROOT_ID];
+  if (!root || !root.children || !root.children.length) {
+    return DASHBOARD_ROOT_ID;
   }
 
-  return parent.id;
+  const firstChild = layout[root.children[0]];
+  if (!firstChild) {
+    return DASHBOARD_ROOT_ID;
+  }
+
+  let parent = firstChild;
+  if (firstChild.type === TABS_TYPE) {
+    const tabs = firstChild;
+    if (tabs && tabs.children && tabs.children.length) {
+      const firstTab = layout[tabs.children[0]];
+      if (firstTab) {
+        parent = firstTab;
+      }
+    }
+  }
+
+  return parent ? parent.id : DASHBOARD_ROOT_ID;
 }
